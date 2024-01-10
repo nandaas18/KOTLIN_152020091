@@ -1,0 +1,47 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity">
+
+    <RecyclerView
+        android:id="@+id/recycler_view_chat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/inputContainer"
+        android:padding="8dp"
+        android:background="@android:color/background_light"
+        android:scrollbars="vertical"
+        android:layout_marginBottom="8dp"/>
+
+    <RelativeLayout
+        android:id="@+id/inputContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white">
+
+        <EditText
+            android:id="@+id/edit_text_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_toStartOf="@+id/btn_send"
+            android:background="@drawable/edit_text_bg"
+            android:hint="Type a message"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Send"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@android:color/white"/>
+    </RelativeLayout>
+
+</RelativeLayout>
